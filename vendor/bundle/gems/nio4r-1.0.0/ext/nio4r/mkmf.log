@@ -1,0 +1,121 @@
+have_func: checking for rb_thread_blocking_region()... -------------------- yes
+
+"gcc-4.2 -o conftest -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/marcuslin/.rbenv/versions/2.0.0-p247/lib -L. -L/Users/marcuslin/.rbenv/versions/2.0.0-p247/lib      -lruby-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc-4.2 -o conftest -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/marcuslin/.rbenv/versions/2.0.0-p247/lib -L. -L/Users/marcuslin/.rbenv/versions/2.0.0-p247/lib      -lruby-static  -lpthread -ldl -lobjc "
+conftest.c: In function ‘t’:
+conftest.c:5: warning: ‘rb_thread_blocking_region’ is deprecated (declared at /Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/intern.h:839)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+ 6: int main(int argc, char **argv)
+ 7: {
+ 8:   if (argc > 1000000) {
+ 9:     printf("%p", &t);
+10:   }
+11: 
+12:   return 0;
+13: }
+/* end */
+
+--------------------
+
+have_header: checking for sys/select.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/select.h>
+/* end */
+
+--------------------
+
+have_header: checking for poll.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <poll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/epoll.h... -------------------- no
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+conftest.c:3:23: error: sys/epoll.h: No such file or directory
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/epoll.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/event.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/event.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/queue.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/queue.h>
+/* end */
+
+--------------------
+
+have_header: checking for port.h... -------------------- no
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+conftest.c:3:18: error: port.h: No such file or directory
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <port.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/resource.h... -------------------- yes
+
+"gcc-4.2 -E -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/x86_64-darwin13.0.0 -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0/ruby/backward -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include/ruby-2.0.0 -I. -I/Users/marcuslin/.rbenv/versions/2.0.0-p247/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/resource.h>
+/* end */
+
+--------------------
+

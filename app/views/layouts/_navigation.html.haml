@@ -1,0 +1,147 @@
+.navbar
+  .navbar-inner
+    .container-fluid
+      %a.brand{href: root_path}
+        %small
+          Woman Health and child Care
+      / /.brand
+      %ul.nav.ace-nav.pull-right
+        %li.grey
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            %i.fa.fa-tasks
+            %span.badge.badge-grey 4
+          %ul.pull-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-closer
+            %li.nav-header
+              %i.fa.fa-ok
+              4 Tasks to complete
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left Software Update
+                  %span.pull-right 65%
+                .progress.progress-mini
+                  .bar{style: "width:65%"}
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left Hardware Upgrade
+                  %span.pull-right 35%
+                .progress.progress-mini.progress-danger
+                  .bar{style: "width:35%"}
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left Unit Testing
+                  %span.pull-right 15%
+                .progress.progress-mini.progress-warning
+                  .bar{style: "width:15%"}
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left Bug Fixes
+                  %span.pull-right 90%
+                .progress.progress-mini.progress-success.progress-striped.active
+                  .bar{style: "width:90%"}
+            %li
+              %a{href: "#"}
+                See tasks with details
+                %i.fa.fa-arrow-right
+        %li.purple
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            %i.fa.fa-bell
+            %span.badge.badge-important 8
+          %ul.pull-right.dropdown-navbar.navbar-pink.dropdown-menu.dropdown-caret.dropdown-closer
+            %li.nav-header
+              %i.fa.fa-warning
+              8 Notifications
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left
+                    %i.btn.btn-mini.no-hover.btn-pink.fa.fa-comment
+                    New Comments
+                  %span.pull-right.badge.badge-info +12
+            %li
+              %a{href: "#"}
+                %i.btn.btn-mini.btn-primary.fa.fa-user
+                Bob just signed up as an editor ...
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left
+                    %i.btn.btn-mini.no-hover.btn-success.fa.fa-shopping-cart
+                    New Orders
+                  %span.pull-right.badge.badge-success +8
+            %li
+              %a{href: "#"}
+                .clearfix
+                  %span.pull-left
+                    %i.btn.btn-mini.no-hover.btn-info.fa.fa-twitter
+                    Followers
+                  %span.pull-right.badge.badge-info +11
+            %li
+              %a{href: "#"}
+                See all notifications
+                %i.fa.fa-arrow-right
+        %li.green
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            %i.fa.fa-envelope
+            %span.badge.badge-success 5
+          %ul.pull-right.dropdown-navbar.dropdown-menu.dropdown-caret.dropdown-closer
+            %li.nav-header
+              %i.fa.fa-envelope-alt
+              5 Messages
+            %li
+              %a{href: "#"}
+                %span.msg-body
+                  %span.msg-title
+                    %span.blue Alex:
+                    Ciao sociis natoque penatibus et auctor ...
+                  %span.msg-time
+                    %i.fa.fa-time
+                    %span a moment ago
+            %li
+              %a{href: "#"}
+                %span.msg-body
+                  %span.msg-title
+                    %span.blue Susan:
+                    Vestibulum id ligula porta felis euismod ...
+                  %span.msg-time
+                    %i.fa.fa-time
+                    %span 20 minutes ago
+            %li
+              %a{href: "#"}
+                %span.msg-body
+                  %span.msg-title
+                    %span.blue Bob:
+                    Nullam quis risus eget urna mollis ornare ...
+                  %span.msg-time
+                    %i.fa.fa-time
+                    %span 3:15 pm
+            %li
+              %a{href: "#"}
+                See all messages
+                %i.fa.fa-arrow-right
+        %li.light-blue
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            %span.user-info
+              %small Welcome,
+              Jason
+            %i.fa.fa-caret-down
+          %ul.user-menu.pull-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-closer
+            %li
+              %a{href: "#"}
+                %i.fa.fa-cog
+                Settings
+            %li
+              %a{href: "#"}
+                %i.fa.fa-user
+                Profile
+            %li.divider
+            %li
+              %a{href: "#"}
+                %i.fa.fa-power-off
+                Logout
+      / /.ace-nav
+    / /.container-fluid
+  / /.navbar-inner

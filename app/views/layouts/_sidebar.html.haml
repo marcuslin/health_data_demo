@@ -1,0 +1,23 @@
+#sidebar.sidebar
+  #sidebar-shortcuts.sidebar-shortcuts
+    #sidebar-shortcuts-large.sidebar-shortcuts-large
+      = button_to 'Delete Demo Data', destroy_demo_path(month: '4'), :class => "btn btn-danger btn-small", method: :delete
+    #sidebar-shortcuts-mini.sidebar-shortcuts-mini
+      %span.btn.btn-danger
+  / #sidebar-shortcuts
+  %ul.nav.nav-list
+    %li
+      %a{href: patient_path(id: 1)}
+        %i.fa.fa-text-width
+        %span.menu-text Patient Information
+    %li
+      %a{href: find_patient_chart_path}
+        %i.fa.fa-dashboard
+        %span.menu-text Search Patient Data
+    %li
+      %a{href: new_health_history_path}
+        %i.fa.fa-text-width
+        %span.menu-text Insert Data
+  / /.nav-list
+  #sidebar-collapse.sidebar-collapse
+    %i.fa.fa-angle-double-left

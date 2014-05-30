@@ -1,0 +1,115 @@
+.page-header.position-relative
+  %h1
+    Patient Registration
+/ /.page-header
+%form.form-horizontal
+  .row-fluid
+    .span2
+      %img{src: "/assets/profile_pic.jpeg"}/
+      .ace-file-input
+      %img{src: "/assets/sample_barcode.png"}/
+    .span10{style: "margin-left: 0;"}
+      .row-fluid
+        .control-group.span6
+          %label.control-label{for: "register_no"} Register No.
+          .controls
+            %input#register_no{disabled: "disabled", type: "text", value: "PTCH000027"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "fingerprint"} Fingerprint
+          .controls
+            %input#fingerprint{type: "text",disabled: "disabled"}/
+            %a{href: "#"} Enrollment
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "identity_no"} Identity No.
+          .controls
+            %input#identity_no{disabled: "disabled", type: "text", value: "256162936"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "date_of_birth"} Date of Birth
+          .controls
+            %input#date_of_birth{type: "text", type: "text", value: "1987-7-24", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "first_name"} First Name
+          .controls
+            %input#first_name{type: "text", value: "Marcus", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "surname"} Surname
+          .controls
+            %input#surname{type: "text", value: "Lin", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label Gender
+          .controls
+            %label
+              %input{name: "gender_radio", type: "radio", checked: true, disabled: "disabled"}/
+              %span.lbl Male
+              %input{name: "gender_radio", type: "radio"}/
+              %span.lbl Female
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "occupation"} Occupation
+          .controls
+            %input#occupation{type: "text", value: "super awesome job", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label Martial Status
+          .controls
+            %label
+              %input{name: "martial-status_radio", type: "radio"}/
+              %span.lbl Married
+              %input{name: "martial-status_radio", type: "radio", checked: true, disabled: "disabled"}/
+              %span.lbl Unmarried
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "ground_line"} Ground Line
+          .controls
+            %input#ground_line{type: "text", value: "1234567", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "mobile"} Mobile
+          .controls
+            %input#mobile{type: "text", value: "0911111111", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "region"} Region
+          .controls
+            %input#mobile{type: "text", value: "kaohsiung", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "identifiable_guardian"} Guardian
+          .controls
+            %input#identifiable_guardian{type: "text", value: "Mindy", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label{for: "region"} Relationship
+          .controls
+            %input#identifiable_guardian{type: "text", value: "Mother", disabled: "disabled"}/
+        .control-group.span12{style: "margin-left: 0;"}
+          %label.control-label{for: "guardians_id_num"} Guardian's Identity No.
+          .controls
+            %input#guardians_id_num.span7{type: "text", value: "1234567", disabled: "disabled"}/
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label Blood Type
+          .controls
+            %label
+              %input{name: "blood_type_radio", type: "radio", checked: true, disabled: "disabled"}/
+              %span.lbl A
+              %input{name: "blood_type_radio", type: "radio"}/
+              %span.lbl B
+              %input{name: "blood_type_radio", type: "radio"}/
+              %span.lbl O
+              %input{name: "blood_type_radio", type: "radio"}/
+              %span.lbl AB
+              %input{name: "blood_type_radio", type: "radio"}/
+              %span.lbl Unknow
+        .control-group.span6{style: "margin-left: 0;"}
+          %label.control-label Allergy
+          .controls
+            %label
+              %input{name: "allergy_radio", type: "radio", checked: true, disabled: "disabled"}/
+              %span.lbl Y
+              %input{name: "allergy_radio", type: "radio"}/
+              %span.lbl N
+        .control-group.span12{style: "margin-left: 0;"}
+          %label.control-label{for: "address"} Address
+          .controls
+            %input#address.span7{type: "text", value: "some super sweet address", disabled: "disabled"}/
+        .control-group.span12{style: "margin-left: 0;"}
+          %label.control-label{for: "email"} Email
+          .controls
+            %input#email.span7{type: "text", value: "sweet_email@gmail.com", disabled: "disabled"}/
+        .control-group.span12{style: "margin-left: 0;"}
+          %label.control-label{for: "note_field"} Note
+          .controls
+            %textarea#note_field.span7{style: "height: 100px", disabled: "disabled"}

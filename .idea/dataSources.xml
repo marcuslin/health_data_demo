@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3809543655">
+    <data-source source="LOCAL" name="Rails health_data: development" uuid="275cce79-00b5-44f7-ac3d-6f226500febd">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/health_data_dev.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails health_data: test" uuid="8f259748-1df3-43e4-a28f-cd16f5cb5bd5">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/health_data_test</jdbc-url>
+      <user-name>marcus</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails health_data: production" uuid="ff70ac35-4a9d-466c-8750-f99116226ce9">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-54-225-101-4.compute-1.amazonaws.com/d65vpcu05g232t</jdbc-url>
+      <user-name>xcxjgjbheulldy</user-name>
+      <user-password>dff2df93df99dff8df87dfe2dff3df9adfc7dfdedfe3dfe6dfc1dfc6df99dfe1dfe7dfeedffadf9bdff8df93dfc9df98dfcbdfe0</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

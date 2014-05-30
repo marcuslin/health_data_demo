@@ -1,0 +1,39 @@
+#development:
+#  adapter: mysql2
+#  encoding: utf8
+#  database: health_data_dev
+#  username: marcus
+#  password:
+#  host: 127.0.0.1
+#  port: 3306
+#test:
+#  adapter: mysql2
+#  encoding: utf8
+#  database: health_data_test
+#  username: marcus
+#  password:
+#  host: 127.0.0.1
+#  port: 3306
+#  secure_auth: false
+development:
+  adapter: sqlite3
+  host: localhost
+  database: db/health_data_dev.sqlite3
+  pool: 5
+  timeout: 5000
+#
+#test:
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+#  pool: 5
+#  timeout: 5000
+#
+#production:
+#  adapter: postgresql
+#  host: ec2-54-225-101-4.compute-1.amazonaws.com
+#  database: d65vpcu05g232t
+#  encoding: unicode
+#  pool: 5
+#  timeout: 5432
+#  username: xcxjgjbheulldy
+#  password: X93R-HY0mtILkl3KMDP1R9c2aJ

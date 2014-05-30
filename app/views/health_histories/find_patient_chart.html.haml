@@ -1,0 +1,20 @@
+.page-header.position-relative
+  %h1 Search Patient
+= simple_form_for :health_histories, :url => '/health_histories/search_history/:patient_id', method: 'get', :html => {:class => 'form-horizontal', role: "form"} do |f|
+  -#- binding.pry
+  .row
+    .control-group.span6
+      %label.control-label{for: "patient_name"} Patient Name
+      .controls
+        = f.input :patient_name, label: false, :input_html => {id: 'pateint_name', value: "Marcus"}
+    .control-group.span6
+      %label.control-label{for: "patient_id"} Patient id
+      .controls
+        = f.input :patient_id, label: false, :input_html => {id: 'pateint_id', value: "1"}
+    .control-group.span6
+      %label.control-label{for: "year"} Choose Year
+      .controls
+        = f.input :year, label: false, collection: 2013..2014
+    .control-group.span12.offset9
+      .controls
+        = f.button :submit, "Search", class: "btn btn-info", role: "button"

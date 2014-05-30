@@ -1,0 +1,11 @@
+.form-horizontal(style="margin-top: 50px; margin-left: 4px;")
+  .row
+    .span12
+      .control-group
+        .controls
+          = button_to "Search Patient Chart", find_patient_chart_path, :class => "btn btn-primary btn-large", :style => "width: 300px"
+  .row
+    .span12
+      .control-group
+        .controls
+          = button_to "Insert Measurement Data", new_health_history_path, :class => "btn btn-primary btn-large", :style => "width: 300px", method: 'get'

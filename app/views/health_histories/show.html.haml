@@ -1,0 +1,109 @@
+.row.span12
+  #chart-1
+:javascript
+  $('#chart-1').highcharts({
+  	  chart: {
+        type: 'line',
+        height: 400
+      },
+      title: {
+          text: 'Patient Monthly Measurement'
+      },
+
+      xAxis: {
+          categories: [
+              'Jan',
+              'Feb',
+              'Mar',
+              'Apr',
+              'May',
+              'Jun',
+              'Jul',
+              'Aug',
+              'Sep',
+              'Oct',
+              'Nov',
+              'Dec'
+          ]
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Percent'
+          }
+      },
+      tooltip: {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+              '<td style="padding:0"><b>{point.y}</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+      },
+      plotOptions: {
+         line: {
+              dataLabels: {
+                  enabled: true,
+                  style: {
+                      textShadow: '0 0 3px white, 0 0 3px white'
+                  }
+              },
+              enableMouseTracking: false
+          }
+      },
+      series: [{
+          name: 'Weight',
+          color: 'green',
+          data: gon.weight
+      },
+      {
+          name: 'Height',
+          color: 'blue',
+          data: gon.height
+      },
+      {
+          name: 'Blood Pressure',
+          color: 'red',
+          data: gon.blood_pressure
+      },
+      {
+          name: 'Blood Sugar',
+          color: 'purple',
+          data: gon.blood_sugar
+      },
+      {
+          name: 'Pulse Rate',
+          color: 'orange',
+          data: gon.pulse_rate
+      },
+      {
+          name: 'SBP',
+          color: 'pink',
+          data: gon.sbp
+      },
+      {
+          name: 'DBP',
+          color: 'yellow',
+          data: gon.dbp
+      },
+      {
+          name: 'MBP',
+          color: 'lightblue',
+          data: gon.mbp
+      },
+      {
+          name: 'SpO2',
+          color: 'Olive',
+          data: gon.spo2
+      },
+      {
+          name: 'AC',
+          color: 'MediumSlateBlue',
+          data: gon.ac
+      },
+      {
+          name: 'PC',
+          color: 'LawnGreen',
+          data: gon.pc
+      }]
+  });

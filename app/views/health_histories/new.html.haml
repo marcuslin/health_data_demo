@@ -1,0 +1,59 @@
+.page-header.position-relative
+  %h1 Create Recorded Data
+= simple_form_for @health_data, :html => {:class => 'form-vertical', role: "form"} do |f|
+  .row
+    .control-group.span6
+      %label.control-label{for: "patient_name"} Patient Name
+      .controls
+        %input#patient_name{type: "text", value: "Marcus"}/
+        = f.input :patient_id, label: false, :input_html => {id: "patient_id", value: 1}, as: :hidden
+    .control-group.span6
+      %label.control-label{for: "weight"} Body Weight
+      .controls
+        = f.input :body_weight, label: false, :input_html => {id: "weight"}
+  .row
+    .control-group.span6
+      %label.control-label{for: "weight"} Body Height
+      .controls
+        = f.input :body_height, label: false, :input_html => {id: "weight"}
+    .control-group.span6
+      .controls
+        = f.input :blood_pressure
+  .row
+    .control-group.span6
+      .controls
+        = f.input :pulse_rate
+    .control-group.span6
+      .controls
+        = f.input :SBP, label: "SBP"
+  .row
+    .control-group.span6
+      .controls
+        = f.input :DBP, label: "DBP"
+    .control-group.span6
+      .controls
+        = f.input :MBP, label: "MBP"
+  .row
+    .control-group.span6
+      .controls
+        = f.input :SpO2, label: "SpO2"
+    .control-group.span6
+      .controls
+        = f.input :AC, label: "AC"
+  .row
+    .control-group.span6
+      .controls
+        = f.input :PC, label: "PC"
+  .row
+    .control-group.span6
+      .controls
+      = f.button :submit, "Create", class: "btn btn-info", role: "button"
+
+:javascript
+  var test = $('#patient_id');
+  $('#patient_name').change(function(){
+    var input_name = $('#patient_name').val();
+    $.get( "/health_histories/find_patient/" + input_name).done(function(result){
+      $(test).replaceWith("<input aria-required='true' class='string required' id='patient_id' maxlength='255' name='health_history[patient_id]' required='required' size='255' type='text' value='"+ result['data'] + "'>");
+    });
+  });
